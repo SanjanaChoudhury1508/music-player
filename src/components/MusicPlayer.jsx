@@ -1,25 +1,33 @@
 import { useRef, useState, useEffect } from "react";
 import "./MusicPlayer.css";
+import cover1 from "../assets/1.jpg";
+import cover2 from "../assets/2.jpg";
+import cover3 from "../assets/3.jpg";
+
+import song1 from "../assets/1.mp3";
+import song2 from "../assets/2.mp3";
+import song3 from "../assets/3.mp3";
+
 
 /* --- 3-song playlist (replace paths with your own) --- */
 const playlist = [
   {
     title: "Apna Bana Le",
     artist: "Arijit Singh",
-    cover: "/src/assets/covers/1.jpg",  // src/assets/…
-    src:   "/src/assets/songs/1.mp3",
+    cover: cover1,  // src/assets/…
+    src:   song1,
   },
   {
     title: "Soni Soni",
     artist: "Vishal Mishra",
-    cover: "/src/assets/covers/2.jpg",
-    src:   "/src/assets/songs/2.mp3",
+    cover: cover2,
+    src: song2,
   },
   {
     title: "Kesariya – (Lo-fi)",
     artist: "Pritam • Arijit",
-    cover: "/src/assets/covers/3.jpg",
-    src:   "/src/assets/songs/3.mp3",
+    cover: cover3,
+    src: song3,
   },
 ];
 
