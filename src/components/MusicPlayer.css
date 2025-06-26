@@ -1,0 +1,81 @@
+/* fullscreen pastel background (optional) */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+  font-family: system-ui, sans-serif;
+}
+
+/* glassy card */
+.player {
+  text-align: center;
+  padding: 45px 35px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cover {
+  width: 210px;
+  height: 210px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  margin-bottom: 22px;
+}
+
+/* scrolling title */
+.scroll-title {
+  width: 240px;
+  margin: 0 auto 28px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.scroll-title span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 1.35rem;
+  font-weight: 700;
+  animation: marquee 6s linear infinite;
+}
+@keyframes marquee {
+  100% { transform: translateX(-100%); }
+}
+
+/* progress bar */
+.progress {
+  position: relative;
+  width: 260px;
+  height: 6px;
+  border-radius: 3px;
+  background: #ececec;
+  margin: 0 auto 30px;
+}
+.progress .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--p, 0%);
+  background: #2e8b57;
+  border-radius: 3px;
+}
+
+/* round control buttons */
+.controls button {
+  width: 56px;
+  height: 56px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 50%;
+  background: #2e8b57;
+  color: #fff;
+  font-size: 1.12rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.controls button:hover { background: #1f5c3d; }
